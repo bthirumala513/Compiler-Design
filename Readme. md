@@ -1,0 +1,15 @@
+1.Purpose:The program is written in Lex to recognize whether a given input string is a valid identifier or not.
+2.Structure of the Program:The program has three main sections:Definition Section→defines helper patterns like letter and digit.
+Rules Section→specifies the pattern of an identifier and what to do when a match is found.
+C Code Section→contains the main function to start lexical analysis.
+3.Pattern Definition:A letter is defined as any alphabet from a–z or A–Z.
+A digit is defined as any number from 0–9.
+4.Rule for Identifier:The first character must be a letter.
+The remaining characters can be either letters or digits.
+If the input matches this rule,the program prints that the string is an identifier.
+5.Working Principle:The program reads the input string.It checks whether the string follows the identifier pattern.
+If yes,it prints that the string is an identifier along with the input.
+If no,it produces no output(since no rule matches).
+6.Examples:Input:abc→Output:abc is an identifier.Input:a1b2→Output:a1b2 is an identifier.
+Input:Z99→Output:Z99 is an identifier.Input:123abc→No output,because an identifier cannot start with a digit.
+Input:_abc→No output,because the program’s rule does not allow underscore at the start.
