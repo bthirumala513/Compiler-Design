@@ -13,9 +13,9 @@ int lines = 0;
 %}
 
 %%
-[^\s\n]+ { words++; }
-\n { lines++; }
-[ \t]+ { ; }
+[^ \t\n]+     { words++; }      /* Count words */
+\n            { lines++; }      /* Count lines */
+[ \t]+        { /* ignore spaces & tabs */ }
 %%
 
 int yywrap() {
