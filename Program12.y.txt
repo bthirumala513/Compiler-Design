@@ -11,8 +11,11 @@
 //Yacc without lex.y //
 
 %{
-#include<stdio.h>
-#include<ctype.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>   // <-- ADD THIS
+int yylex();
+void yyerror(char *s);
 %}
 
 %token DIGIT
